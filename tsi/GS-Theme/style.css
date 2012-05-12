@@ -1,0 +1,405 @@
+/*
+Theme Name: Growth Spark
+Description: Growthspark Theme
+Theme URI: http://growthspark.com
+Version: 1.0
+Author: Growth Spark
+Author URI: http://growthspark.com
+*/
+
+/*	jonathan@growthspark.com	|	2011 December 19
+This is the basic style sheet for Trauma Stewardship Institute, built to match
+the original designs specified in the images sent to me. Please comment any
+changesto this code just for the peace of mind of the editors after you.
+
+If you really feel generous, please leave comments for any styling for which
+the reasoning is not immediately apparent so that no one comes behind you to
+change it only to need to change it back.
+*/
+
+a
+{	color:				#ffffff;
+	text-decoration:	none;
+}
+
+body
+/*	jonathan@growthspark.com	|	2011 December 19
+DIV#CONTAINER is redundant as a practice; the body is the container, unless
+there is some compelling reason to use another container for all content.
+*/
+{	background-color:	#64b6cb;
+	background-image:	url(	"media/background.jpg"	);
+	font-family:		Arial, sans-serif;
+	margin:0px auto;	/*MD added*/
+	width:				1020px; /*or 100%?? 900px;*/
+}
+
+div
+{	width:			100%;
+}
+
+p
+{	line-height:	30px;
+}
+
+ul
+{	list-style-type:	none;
+}
+
+/*	jonathan@growthspark.com	|	2011 December 21
+The following classes exist just for Internet Explorer, because it likes to
+break all of the rules. They are just a duplication of the some of the 
+declarations from below.
+*/
+
+h4.body_center_h4
+{	color:			#55b5c5;
+	font-weight:	400;
+}
+
+a.menu_main:hover,
+li.current-menu-item	>	a
+{	border-bottom-color:	#2f8e92;
+	border-bottom-style:	solid;
+	border-bottom-width:	3px;
+}
+
+a.menu_main
+{	color:	#ffffff;	
+}
+
+li.menu_main
+{	color:			#ffffff;
+	display:			inline;
+	padding-left:	40px;
+}
+
+ul#menu_main
+{	background-color:	#64b6cb;
+	color:				#ffffff;
+	list-style-type:	none;
+	margin-bottom:		0px;
+	padding-left:		0px;
+}
+
+a.menu_page
+{	color:	#b0b1ac;
+}
+
+a.menu_page:hover,
+a.menu_page_current
+{	color:	#55b5c5;
+}
+
+li.menu_page	
+{	padding-top:	20px;
+}jonathan
+
+ul#menu_page
+{	list-style-type:	none;
+	padding-left:		0px;
+	text-align:			left;
+}
+
+h2.name
+{	color:			#ffffff;
+	font-weight:	300;
+	margin-left:	40px;
+	width:			200px;
+}
+
+	h2.name	>	a
+	{	color:	#ffffff;
+	}
+
+h4#follow
+{	background-image:		url(	"media/rss.jpg"	);
+	background-repeat:	no-repeat;
+	height:					30px;
+	margin-bottom:			0px;
+	padding-left:			30px;
+}
+/*
+This is the end of the Internet Explorer classes.
+*/
+
+/*	jonathan@growthspark.com	|	2011 December 21
+These classes are associated with the vertical scroller on the content pages.
+
+.scrollbar_container {  
+    position:relative;  
+/*    width:500px;	  
+} 
+ 
+#scrollbar_track {  
+    position:absolute;  
+    top:0;  
+    rightright:0;  
+    height:100%;  
+    width:10px;  
+    background-color:transparent;  
+    cursor:move;  
+    z-index:	1;
+} 
+ 
+#scrollbar_handle {  
+    width:10px;  
+    background-color:#5c92e7;  
+    cursor:move;  
+    -moz-border-radius: 5px;  
+    -webkit-border-radius: 5px;  
+    opacity:0.9;  
+    -moz-opacity:0.9;  
+} 
+ 
+.scrollbar_content {  
+    overflow:hidden;  
+    width:485px;  
+}
+/*
+This is the end of the classes associated with the scroll bar.
+*/
+
+div#body
+/*	jonathan@growthspark.com	|	2011	December 19
+I had some difficulty with getting DIV#BODY to render the white background. I
+am not sure why, but I worked around it by getting its contents to render white
+backgrounds. This applies to DIV#BODY_LEFT, DIV#BODY_CENTER, AND DIV#BODY_RIGHT
+
+	jonathan@growthspark.com	|	2011 December 27
+Some time last week I figured out that the any containing block with render no
+box at all, if all of its child elements are floated. All of the child elements
+in this block are still floated, but possibly setting HEIGHT:AUTO corrected the
+rendering issue? I am not sure, not willing to mess with it.
+*/
+{	background-color:	#ffffff;
+	background-image: url	(	"media/body_background.jpg"	);
+	clear:				both;
+	color:				#b0b1ac;
+/*	jonathan@growthspark.com	|	2011 December 21
+I temporarily commented out this declaration, because I have not yet devised
+how best to incorporate a scroll bar into DIV#BODY_CENTER, and DIV#BODY_RIGHT.
+Its current value is necessary to accomodate the home page JPG.
+	height:				685px;
+*/
+	overflow:			hidden;
+	padding-top:		25px;
+}
+
+div#body_left
+{	background-color:	#ffffff;
+	float:				left;
+	padding-left:		3%;
+	width:				22%;
+}
+
+	div#body_left	>	h2
+	{	color:			#55b5c5;
+		font-weight:	400;
+		margin-bottom:	0px;
+		margin-top:		0.60em;
+	}
+	
+	div#body_left	>	ul
+	{	list-style-type:	none;
+		padding-left:		0px;
+		text-align:			left;
+	}
+	
+		div#body_left	>	ul	>	li
+		{	padding-bottom:	20px;
+			padding-top:		0px;
+		}
+		
+			div#body_left	>	ul	>	li	>	a
+			{	color:	#b0b1ac;
+			}
+			
+			div#body_left	>	ul	>	li	>	a:active,
+			div#body_left	>	ul	>	li	>	a:hover
+			{	color:	#55b5c5;
+			}
+
+div#body_center
+{	background-color:	#ffffff;
+	float:				left;
+	height:				auto;
+	padding-left:		3%;
+	padding-right:		3%;
+/*	position:			relative;
+		left:	25%;
+*/
+	width:				39%;
+}
+
+	img.alignnone
+	{	float:			left;
+		margin-right:	20px;
+	}
+
+	div#body_center	>	h3
+	{	color:			#55b5c5;
+		font-weight: 	600;
+		margin-bottom:	1.5em;
+	}
+	
+	div#body_center	>	h4
+	{	color:			#55b5c5;
+		font-weight: 	600;
+		margin-bottom:	10px;
+		margin-top:		0px;
+	}
+	
+	div#body_center	>	h4.body_center_h4
+	{	font-weight:	400;
+	}
+	
+	div#body_center	>	p
+	{	margin-top:		0.5em;
+		margin-bottom:	2em;
+	}
+	
+	div#body_center	>	ul	>	li
+	{	padding-bottom:	10px;	
+	}
+/*
+div#body_double
+{	overflow:	scroll;
+	width:		100%;
+}
+*/
+
+div#body_right
+{	background-color:	#ffffff;
+	color:				#55b5c5;
+	float:				left;
+	font-style:			italic;
+	height:				auto;
+	padding-right:		3%;
+	width:				25%;
+}
+
+	div#body_right	>	h3
+	{	font-style:		none;
+		margin-bottom:	0px;
+		margin-top:		0px;
+	}
+	
+	div#body_right	>	h5
+	{	margin-bottom:	0.5em;
+		margin-top:		0px;
+	}
+	
+	div#body_right	>	p
+	{	margin-bottom: 0.5em;
+	}
+
+div#footer
+{	background-color:	#8dd1de;
+	color:				#ffffff;
+	clear:				both;
+	float:left;/*MD Added*/
+	margin-bottom:		10px;
+}
+
+h5#footer_copyright
+{	color:			#ffffff;
+	clear:			both;
+	margin-left:	40px;
+}
+
+div.footer_center,
+div.footer_left,
+div.footer_right
+{	background-color:		#8dd1de;
+	border-left-color:	#ffffff;
+	border-left-style:	dotted;
+	border-left-width:	1px;
+	color:					#ffffff;
+	float:					left;
+	height:					110px;
+	margin-bottom:			10px;	
+	margin-top:				10px;
+	padding-left:			3%;
+	width:					30%;
+}
+
+div.footer_left
+{	border-left-style:	none;
+}
+/*
+	div.footer_division	>	form	>	input#text
+	{	height:	30px;
+		padding-top:	-15px;
+	}
+	
+	div.footer_division	>	form	>	input#image
+	{	margin-top:	20px;
+	}
+*/
+
+	div.footer_center	>	h4,
+	div.footer_left	>	h4,
+	div.footer_right	>	h4
+	{	margin-top:	0px;
+	}
+
+	div.footer_left	>	h4#follow
+	{	background-image:		url(	"media/rss.jpg"	);
+		background-repeat:	no-repeat;
+		height:					30px;
+		margin-bottom:			0px;
+		padding-left:			30px;
+	}
+
+div#header
+{	padding-bottom:	0px;
+}
+
+	div#header	>	h2
+	{	color:			#ffffff;
+		font-weight:	300;
+		margin-left:	40px;
+		width:			200px;
+	}
+	
+		div#header	>	ul
+	{	background-color:	#64b6cb;
+		color:				#ffffff;
+		list-style-type:	none;
+		margin-bottom:		0px;
+		padding-bottom:	5px;
+		padding-left:		0px;
+		padding-top:		5px;
+	}
+	
+		div#header	>	ul	>	li
+		{	display:				inline;
+			padding-left:		40px;
+		}
+		
+			div#header	>	ul	>	li	>	a
+			{	color:	#ffffff;		
+			}
+			
+			div#header	>	ul	>	li	>	a:active,
+			div#header	>	ul	>	li	>	a:hover
+			{	border-bottom-color:	#2f8e92;
+				border-bottom-style:	solid;
+				border-bottom-width:	3px;
+			}
+			
+ul.sub-menu
+{	display:	none;
+}
+		
+.search input{
+margin-top:10px;
+margin-left:	-3px;
+	vertical-align: top;
+}
+input#text{
+width:225px;
+	height:17px;
+	padding:4px;
+}
